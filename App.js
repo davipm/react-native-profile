@@ -49,7 +49,7 @@ export default function App() {
             <Text>483</Text>
             <SubText>Posts</SubText>
           </StatsBox>
-          <StatsBox>
+          <StatsBox style={{ borderLeftWidth: 1, borderRightWidth: 1, borderColor: '#DFD8C8' }}>
             <Text>483</Text>
             <SubText>Followers</SubText>
           </StatsBox>
@@ -66,7 +66,7 @@ export default function App() {
                 flex: 1,
                 height: undefined,
                 width: undefined,
-                borderRadius: 9999,
+                borderRadius: 15,
               }} resizeMode="cover" />
             </MediaImageContainer>
             <MediaImageContainer>
@@ -74,7 +74,7 @@ export default function App() {
                 flex: 1,
                 height: undefined,
                 width: undefined,
-                borderRadius: 9999,
+                borderRadius: 15,
               }} resizeMode="cover" />
             </MediaImageContainer>
             <MediaImageContainer>
@@ -82,10 +82,15 @@ export default function App() {
                 flex: 1,
                 height: undefined,
                 width: undefined,
-                borderRadius: 9999,
+                borderRadius: 15,
               }} resizeMode="cover" />
             </MediaImageContainer>
           </ScrollView>
+
+          <MediaCount>
+            <Text style={{ fontSize: 24, color: '#DFD8C8', fontWeight: '300' }}>70</Text>
+            <Text style={{ fontSize: 12, color: '#DFD8C8', fontWeight: '300', textTransform: 'uppercase' }}>Media</Text>
+          </MediaCount>
         </View>
       </ScrollView>
     </Container>
@@ -190,4 +195,23 @@ const MediaImageContainer = styled.View`
   border-radius: 12px;
   overflow: hidden;
   margin: 0 10px;
+`;
+
+const MediaCount = styled.View`
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: 30px;
+  width: 90px;
+  height: 90px;
+  background-color: #41444B;
+  border-radius: 12px;
+  
+  shadow-color: rgba(0, 0, 0, .38);
+  shadow-offset: 0 20px;
+  shadow-radius: 30px;
+  shadow-opacity: 1;
+  elevation: 5;
 `;
