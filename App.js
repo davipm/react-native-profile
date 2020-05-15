@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, ScrollView, View, SafeAreaView, Image } from "react-native";
+import { Text, ScrollView, View, Image } from "react-native";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 
 import styled from "styled-components/native";
@@ -21,9 +21,8 @@ export default function App() {
                 flex: 1,
                 height: undefined,
                 width: undefined,
-                borderRadius: 9999,
               }}
-              resizeMode="center"
+              resizeMode="cover"
             />
           </ProfileImage>
           <Dm>
@@ -44,6 +43,50 @@ export default function App() {
           <Name>Julie</Name>
           <Job>Photographer</Job>
         </InfoContainer>
+
+        <StatsContainer>
+          <StatsBox>
+            <Text>483</Text>
+            <SubText>Posts</SubText>
+          </StatsBox>
+          <StatsBox>
+            <Text>483</Text>
+            <SubText>Followers</SubText>
+          </StatsBox>
+          <StatsBox>
+            <Text>483</Text>
+            <SubText>Following</SubText>
+          </StatsBox>
+        </StatsContainer>
+
+        <View style={{ marginTop: 32 }}>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <MediaImageContainer>
+              <Image source={require('./assets/media1.jpg')} style={{
+                flex: 1,
+                height: undefined,
+                width: undefined,
+                borderRadius: 9999,
+              }} resizeMode="cover" />
+            </MediaImageContainer>
+            <MediaImageContainer>
+              <Image source={require('./assets/media2.jpg')} style={{
+                flex: 1,
+                height: undefined,
+                width: undefined,
+                borderRadius: 9999,
+              }} resizeMode="cover" />
+            </MediaImageContainer>
+            <MediaImageContainer>
+              <Image source={require('./assets/media3.jpg')} style={{
+                flex: 1,
+                height: undefined,
+                width: undefined,
+                borderRadius: 9999,
+              }} resizeMode="cover" />
+            </MediaImageContainer>
+          </ScrollView>
+        </View>
       </ScrollView>
     </Container>
   );
@@ -77,6 +120,8 @@ const Dm = styled.View`
   height: 40px;
   border-radius: 20px;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Active = styled.View`
@@ -119,4 +164,30 @@ const Name = styled.Text`
 const Job = styled(Name)`
   color: #aeb5bc;
   font-size: 14px;
+`;
+
+const StatsContainer = styled.View`
+  flex-direction: row;
+  align-self: center;
+  margin-top: 32px;
+`;
+
+const StatsBox = styled.View`
+  flex: 1 1 auto;
+  align-items: center;
+`;
+
+const SubText = styled(Name)`
+  font-size: 12px;
+  font-weight: 500;
+  color: #AEB5BC;
+  text-transform: uppercase;
+`;
+
+const MediaImageContainer = styled.View`
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 10px;
 `;
