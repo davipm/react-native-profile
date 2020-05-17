@@ -49,7 +49,13 @@ export default function App() {
             <Text>483</Text>
             <SubText>Posts</SubText>
           </StatsBox>
-          <StatsBox style={{ borderLeftWidth: 1, borderRightWidth: 1, borderColor: '#DFD8C8' }}>
+          <StatsBox
+            style={{
+              borderLeftWidth: 1,
+              borderRightWidth: 1,
+              borderColor: "#DFD8C8",
+            }}
+          >
             <Text>483</Text>
             <SubText>Followers</SubText>
           </StatsBox>
@@ -62,34 +68,57 @@ export default function App() {
         <View style={{ marginTop: 32 }}>
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             <MediaImageContainer>
-              <Image source={require('./assets/media1.jpg')} style={{
-                flex: 1,
-                height: undefined,
-                width: undefined,
-                borderRadius: 15,
-              }} resizeMode="cover" />
+              <Image
+                source={require("./assets/media1.jpg")}
+                style={{
+                  flex: 1,
+                  height: undefined,
+                  width: undefined,
+                  borderRadius: 15,
+                }}
+                resizeMode="cover"
+              />
             </MediaImageContainer>
             <MediaImageContainer>
-              <Image source={require('./assets/media2.jpg')} style={{
-                flex: 1,
-                height: undefined,
-                width: undefined,
-                borderRadius: 15,
-              }} resizeMode="cover" />
+              <Image
+                source={require("./assets/media2.jpg")}
+                style={{
+                  flex: 1,
+                  height: undefined,
+                  width: undefined,
+                  borderRadius: 15,
+                }}
+                resizeMode="cover"
+              />
             </MediaImageContainer>
             <MediaImageContainer>
-              <Image source={require('./assets/media3.jpg')} style={{
-                flex: 1,
-                height: undefined,
-                width: undefined,
-                borderRadius: 15,
-              }} resizeMode="cover" />
+              <Image
+                source={require("./assets/media3.jpg")}
+                style={{
+                  flex: 1,
+                  height: undefined,
+                  width: undefined,
+                  borderRadius: 15,
+                }}
+                resizeMode="cover"
+              />
             </MediaImageContainer>
           </ScrollView>
 
           <MediaCount>
-            <Text style={{ fontSize: 24, color: '#DFD8C8', fontWeight: '300' }}>70</Text>
-            <Text style={{ fontSize: 12, color: '#DFD8C8', fontWeight: '300', textTransform: 'uppercase' }}>Media</Text>
+            <Text style={{ fontSize: 24, color: "#DFD8C8", fontWeight: "300" }}>
+              70
+            </Text>
+            <Text
+              style={{
+                fontSize: 12,
+                color: "#DFD8C8",
+                fontWeight: "300",
+                textTransform: "uppercase",
+              }}
+            >
+              Media
+            </Text>
           </MediaCount>
         </View>
       </ScrollView>
@@ -185,7 +214,7 @@ const StatsBox = styled.View`
 const SubText = styled(Name)`
   font-size: 12px;
   font-weight: 500;
-  color: #AEB5BC;
+  color: #aeb5bc;
   text-transform: uppercase;
 `;
 
@@ -206,10 +235,10 @@ const MediaCount = styled.View`
   margin-left: 30px;
   width: 90px;
   height: 90px;
-  background-color: #41444B;
+  background-color: #41444b;
   border-radius: 12px;
-  
-  shadow-color: rgba(0, 0, 0, .38);
+
+  shadow-color: rgba(0, 0, 0, 0.38);
   shadow-offset: 0 20px;
   shadow-radius: 30px;
   shadow-opacity: 1;
